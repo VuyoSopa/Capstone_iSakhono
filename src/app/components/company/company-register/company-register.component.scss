@@ -1,0 +1,229 @@
+.row {
+    margin: 0;
+    padding:0 ;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.sakhono-logo{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+}
+img{
+    background-color: white;
+}
+
+span{
+    position: relative;
+  top: 80px; 
+  padding: 0 30px;
+  
+  
+}
+
+
+.navReg{
+    font-weight: bolder;
+    font-size: xx-large;
+    
+}
+
+.navLog{
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgb(189, 188, 188);
+    
+}
+
+.card-auth{
+    display: flex ;
+    justify-content: center;
+    background-color: lightgrey;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: 130px;
+    
+    
+    
+}
+
+#fullname{
+    margin: 15px; 
+}
+
+#fullnameInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border-color: white;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    
+}
+
+#email{
+    margin: 15px;
+}
+
+#emailInput{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    border-color: white;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    color: black;
+}
+
+#industry{
+    margin: 15px; 
+}
+
+#industryInput{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    border-color: white;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    color: black;
+}
+
+
+#password{
+    
+    margin: 15px; 
+}
+
+#passwordInput{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    border-color: white;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    color: black;
+}
+
+#location{
+    margin: 15px; 
+}
+
+#locationInput{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    border-color: white;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    color: black;
+}
+
+#services{
+    margin: 15px; 
+}
+
+// #servicesInput{
+//     justify-content: center;
+//     align-items: center;
+//     display: flex;
+//     border-radius: 15px;
+//     border-color: white;
+//     width: 300px;
+//     height: 50px;
+//     font-weight: bold;
+//     font-size: 17px;
+//     color: black;
+// }
+
+#contactPerson{
+    margin: 15px; 
+}
+
+#contactpersonInput{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    border-color: white;
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    color: black;
+}
+
+// #c_password{
+    
+//     margin: 15px; 
+// }
+
+// #c_passwordInput{
+//     justify-content: center;
+//     align-items: center;
+//     display: flex;
+//     border-radius: 15px;
+//     border-color: white;
+//     width: 300px;
+//     height: 50px;
+//     font-weight: bold;
+//     font-size: 17px;
+//     color: black;
+// }
+
+#registerButton{
+    background-color: indigo;
+    border-radius: 10px;
+    color: white;
+    margin: 35px;
+    height: 50px;
+    width: 100px;
+    font-weight: bolder;
+    font-size: 20px;     
+}
+
+#existingAccount{
+    font-weight: bolder;
+    font-style: italic;
+    font-size: larger;
+    padding: 0 30px;
+    position: relative;
+    top: 120px;
+    
+}
+
+#loginName{
+    color: purple; 
+
+}
+
+#buttonFor-register{
+    text-align: center;
+    padding-right: 35px;
+    align-items: center;
+    padding-right: 2px;
+     
+}
+
+.left{
+    margin-top: 2%;
+}

@@ -1,0 +1,171 @@
+
+  <div id="text">
+    <img onclick="window.history.go(-1)" src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt=""
+      class="left" srcset="" height="50px" width="50px">
+
+    <h2> Job Application Form</h2>
+  </div>
+
+
+
+<div class="container">
+<div class="row mx-0 justify-content-center">
+<div class="col-md-7 col-lg-5 px-lg-2 col-xl-4 px-xl-0 px-xxl-3">
+<form name="form" (ngSubmit)="f.form.valid && submitApplication()" #f="ngForm" novalidate
+  method="POST"
+  class="w-100 rounded-1 p-4 border"
+  enctype="multipart/form-data"
+>
+  <label class="d-block mb-3">
+    <!-- <span class="form-label d-block">Full name</span> -->
+    <input
+      required
+      name="name"
+      type="text"
+      class="form-control"
+      placeholder="Full name"
+      name="fullname" [(ngModel)]="form.fullname" required #fullname="ngModel"
+      [ngClass]="{ 'is-invalid': f.submitted && fullname.errors}"
+    />
+  </label>
+
+    <label class="d-block mb-3">
+        <!-- <span class="form-label d-block">Email address</span> -->
+        <input
+          required
+          name="IdNumber"
+          type="Id"
+          class="form-control"
+          placeholder="Id number"
+         name="IdNumber" [(ngModel)]="form.id" required #id="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && id.errors}"
+        />
+      </label>
+
+    <label class="d-block mb-3">
+    <!-- <span class="form-label d-block">Id:</span> -->
+    <input
+      required
+      name="Contact"
+      type="contact"
+      class="form-control"
+      placeholder="Contact"
+      name="contact" [(ngModel)]="form.contact" required #contact="ngModel"
+      [ngClass]="{ 'is-invalid': f.submitted && contact.errors}"
+    />
+    </label>
+
+    <label class="d-block mb-3">
+    <!-- <span class="form-label d-block">Email address</span> -->
+    <input
+      required
+      name="email"
+      type="email"
+      class="form-control"
+      placeholder="Email address"
+      name="email" [(ngModel)]="form.email" required #email="ngModel"
+      [ngClass]="{ 'is-invalid': f.submitted && email.errors}"
+    />
+    </label>
+    <label class="d-block mb-3">
+        <!-- <span class="form-label d-block">Email address</span> -->
+        <input
+          required
+          name="Address"
+          type="Address"
+          class="form-control"
+          placeholder="Address"
+          name="address" [(ngModel)]="form.address" required #address="ngModel"
+      [ngClass]="{ 'is-invalid': f.submitted && address.errors}"
+        />
+        </label>
+
+
+
+    <label class="d-block mb-3" require>
+    <!-- <span class="form-label d-block">Years of experience</span> -->
+    <select required name="experience" style="width: 200px;" class="form-select"  onchange="this.className=this.options[this.selectedIndex].className"
+    class="silver">
+      <option class="silver">Years of experience</option>
+      <option class="one">1 - 2 years</option>
+      <option class="one">2 - 4 years</option>
+  <option class="one">Super-visor level</option>
+      <option class="one">Management level</option>
+    </select>
+  </label>
+
+  <label class="d-block mb-3">
+    <!-- <span class="form-label d-block">Tell us more about yourself</span> -->
+    <textarea style="font-size: large;" 
+      name="message"
+      class="form-control"
+      rows="3"
+      placeholder="What motivates you?"
+      name="message" [(ngModel)]="form.message" required #message="ngModel"
+      [ngClass]="{ 'is-invalid': f.submitted && message.errors}"
+    ></textarea>
+  </label>
+
+  <label class="d-block mb-3">
+    <span class="form-label d-block">Upload Your Work</span>
+    <input required name="cv" type="file" id="upload"  name="cv" [(ngModel)]="form.cv" required  #cv="ngModel"
+    [ngClass]="{'is-invalid': f.submitted && cv.errors}">
+  </label>
+
+  <!-- <div class="mb-4">
+    <div>
+      <div class="form-check">
+        <label class="d-block">
+          <input
+            type="radio"
+            class="form-check-input"
+            name="remote"
+            value="yes"
+            checked
+          />
+          <span class="form-check-label"
+            >You'd like to work remotely</span
+          >
+        </label>
+      </div>
+    </div>
+    <div>
+      <label class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="remote"
+          value="no"
+        />
+        <span class="form-check-label">You'd prefer to work onsite</span>
+      </label>
+    </div>
+  </div> -->
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn" ngSubmit="submitApplication"> 
+    
+      Submit Application
+      
+    </button>
+  </div>
+
+  <div class="d-block text-end">
+    <div class="small">
+      by
+      <a
+        href="https://iSakhono.com"
+        class="text-dark text-decoration-none"
+        target="_blank"
+        >Sakhono</a
+      >
+    </div>
+  </div>
+</form>
+</div>
+</div>
+</div>
+
+<app-bottom-navbar></app-bottom-navbar>
+
+

@@ -1,0 +1,149 @@
+
+
+.content{
+align-items: center;
+justify-content: center;
+text-align: center;
+margin-top: 7%;
+}
+
+
+
+
+.bio {
+    width: fit-content;
+    margin-left: 20px;
+    // margin-top: px;
+}
+
+
+.container-3 {
+    display: flex;
+    justify-content: center;
+
+}
+
+#text{
+    background-color: #010144;
+    color: white;
+    justify-items: center;
+    // width: 100%;
+    height: 81px;
+    text-align: center;
+    // align-items: center;
+    // border: 10px;
+    // border: 7px solid #010144;
+    // margin-top: 40px;
+
+}
+
+
+
+    h2{
+        // position: relative;
+        margin-top: -30px;
+        right: 30px;
+        
+    }
+
+.ser {
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+
+
+
+.left {
+    // position: relative;
+    padding-top: 20px;
+    margin-right: 75%;
+}
+
+// .pen {
+//     position: relative;
+//     left: 330px;
+//     height: 30px;
+//     width: 30px;
+
+// }
+
+#companyProfile{
+    // border-radius: 30px;
+    // float: left;
+    margin-bottom: 5%;
+    // margin-left: 25%;
+    padding-bottom: 2px;
+    text-align: center !important;
+    // margin-left: 20px;
+}
+
+
+// .list-item {
+//     margin-bottom: 2%;
+//     font-weight: bolder;
+
+// }
+
+.btn {
+    background-color: indigo;
+    color: white;
+    position: relative;
+    bottom: 30px;
+}
+// .list-item h6 {
+//     padding: 0;
+//     margin: 0;
+// }
+
+
+p{
+    font-weight: bolder;
+    font-size: larger;
+    position: relative;
+    bottom: 40px;
+}
+
+h3{
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+h6{
+    font-size: larger;
+    font-weight: 600;
+    // text-decoration: underline;
+    position: relative;
+    left: 40px;
+}
+
+small{
+    font-size: large;
+    position: relative;
+    // right: 60px;
+}
+
+#deleteJob{
+    position: relative;
+    bottom: 20px;
+    left: 300px;
+    // margin-left: 50%;
+    background-color: indigo;
+    color: white;
+    height: 40px;
+    width: 70px;
+    border-radius: 10px;
+    font-size: large;
+
+}
+
+.card{
+    background-color: lightgray;
+    margin: 9px;
+
+}
+ 
+.card small{
+    overflow-y: hidden;
+}

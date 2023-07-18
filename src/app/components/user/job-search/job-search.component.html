@@ -1,0 +1,71 @@
+<!-- <div class="title">
+  <h2>
+  <img onclick="window.history.go(-1)"  src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt="" class="left" srcset="" height="50px" width="50px"> 
+     Jobs
+    </h2>
+    
+</div> -->
+
+<div id="text">
+  <img onclick="window.history.go(-1)" src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt=""
+    class="left" srcset="" height="50px" width="50px">
+
+  <h2>Jobs</h2>
+</div>
+
+<div class="container">
+
+
+  <div class="search">
+    <input type="text" placeholder="Search for jobs"name="search" height="15px" width="100px">
+    <button class="click" type="button" width="15px"><img src="../../../../assets/images/icons8-search.svg"  id="bar" alt="" height="25px"
+        width="30px"></button>
+    <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
+  </div>
+  <!-- <div class="row"> -->
+    <!-- <div class="col-6"> -->
+       <!-- <div class="card">
+          <div class="card text-center" *ngFor="let job of jobs">
+          <div class="card-header">{{job.companyname}}</div>
+          <div class="card-body">
+            <h5 class="card-title">JOB: {{job.jobtitle}}</h5>
+            <p class="card-text">{{job.job_description}}</p>
+            <a routerLink="/application-form"class="btn btn-dark">Apply Now</a>
+          </div>
+          <div class="card-footer text-muted">{{job.id}}</div>
+        </div>
+      </div> -->
+
+      <div class="grid-container">
+        <div class="card text-center" *ngFor="let job of jobs">
+        <div class="card-name">{{job.companyname}}</div>
+        <div class="card-body">
+          <h5 class="card-title">JOB: {{job.jobtitle}}</h5>
+          <p class="card-text">{{job.job_description}}</p>
+          <a routerLink="/application-form"class="btn btn-dark">Apply Now</a>
+        </div>
+        <div class="card-end text-muted">{{job.id}}</div>
+      </div>
+    </div>
+
+        <!-- <div class="card-body">
+          <div class="content">
+            
+            <h3>JOB: {{job.jobtitle}}</h3>
+            <h4 class="card-text"> {{job.job_description}}</h4>
+            <h5>{{job.companyname}}</h5>
+            <p>{{job.location}}</p>
+             <p>{{currentUser.id}}</p> 
+          </div> -->
+
+        
+        
+      </div>
+    <!-- </div> -->
+    
+    
+
+<!-- </div> -->
+<div>
+  <app-bottom-navbar></app-bottom-navbar>
+</div>

@@ -1,0 +1,75 @@
+
+
+    <div id="text">
+      <img 
+      onclick="window.history.go(-1)" 
+        src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" 
+        alt="" class="left" srcset="" height="50px" width="50px"> 
+    <h2>Company Profile</h2>
+</div>
+    
+    <div class="container profile">
+      <div class="container-2" id="companyProfile">
+        <img src="../../../../assets/images/compan.jpg" 
+        height="200px">
+    
+  
+      </div>
+      <div class="content" *ngIf="profile">
+        <p> {{profile.companyname}}  </p> 
+        <p> {{profile.company_email}} </p>   
+        <a class="btn" routerLink="/job-post">New Job Post</a>
+        <!-- <p>{{currentUser.id}}</p> -->
+      </div>
+    </div>
+
+    <hr>
+    
+    <!-- <div class="card"> -->
+      
+      <div class="container">
+        <div class="content-1" *ngIf="jobs; else elseBlock">
+          <div class="intro" *ngIf="jobs.length">
+            <h3>Job Posted</h3>
+          </div>
+          <div class="list-jobs">
+            
+            <a  class="list-item" *ngFor="let job of jobs">
+              <div class="card">
+              <h6 routerLink="/job-edit/{{job._id}}">{{job.jobtitle}}</h6>
+              <small >Description: <span class="text-secondary">{{job.job_description}}</span></small>
+              <span class="text-secondary"><img src="../../../../assets/images/location-indicator-red-svgrepo-com.svg" height="25px" width="25px">{{job.location}}</span>
+              <button (click)="deleteJob(job._id)" id="deleteJob">Delete</button>
+            </div>
+            </a>
+          
+          </div>
+        </div>
+        <ng-template #elseBlock>
+          <h4>No jobs posted yet</h4>
+        </ng-template>
+      </div>
+    <!-- </div> -->
+
+
+
+   
+<ul class="Services" >
+  <!-- <h3>Services <b> <a routerLink="/company-profile-edit/"><img src="../../../../assets/images/pen-1319-svgrepo-com (1).svg" alt="" class="pen"></a></b></h3> -->
+  <!-- <h4>{{profile.services}}</h4> 
+  <h4>{{profile.services}}</h4>
+  <h4>{{profile.services}}</h4>
+  <h4>{{profile.services}}</h4>
+  <h4>{{profile.services}}</h4> -->
+</ul>
+ 
+
+    
+
+
+
+<!-- <div class="save-btn">
+  <button>save</button>
+</div> -->
+
+<app-company-bottom-navbar></app-company-bottom-navbar>

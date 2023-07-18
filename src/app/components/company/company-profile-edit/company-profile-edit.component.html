@@ -1,0 +1,76 @@
+
+
+    <div id="text">
+      <img onclick="window.history.go(-1)" src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt=""
+        class="left" srcset="" height="50px" width="50px">
+  
+      <h2>Edit Profile</h2>
+    </div>
+    <div class="container">
+    
+              <form #userForm= >
+                  
+              <!-- > -->
+    
+              <!-- {{ userForm.value | json}} -->
+                    <div class="form-group">
+                      <!-- <label for="firstName">firstName/label> -->
+            
+                      <input id="companyName" type="text" required placeholder="Company Name" class="form-control"
+                             name="companyName" ngModel > 
+                    </div>
+    
+                    <div class="form-group">
+                      <!-- <label for="lastName">Last Name</label> -->
+    
+                      <input id="industry" type="text" required placeholder="Industry" class="form-control"
+                            name="industry" ngModel>
+                    </div>
+    
+                    <div class="form-group">
+                      <!-- <label for="dateOfBirth">Date of Birth</label> -->
+    
+                      <input id="location" type="text" required placeholder="Location" class="form-control"
+                            name="location" ngModel>
+                    </div>
+
+                    <div class="form-group">
+                         <!-- <label for="phoneNumber">Phone number</label>  -->
+    
+                        <input id="contactPerson" required type="text"  placeholder="Contact Person"  class="form-control"
+                              name="contactPerson" ngModel>
+                       </div>
+     
+    
+                      <div class="form-group">
+                        <!-- <label for="emailAddress">Email Address</label> -->
+    
+                         <input id="emailAddress" required type="text"  placeholder="Email Address" class="form-control"
+                              name="emailAddress" ngModel>
+                      </div> 
+    
+                      <div class="form-group" id="services">
+                        <!-- <label for="homeAddress">Home Address</label> -->
+                         <!-- <input id="services" type="text"  placeholder="Services" class="form-control"
+                              name="services" ngModel> -->
+                              <label class="d-block">
+                                <!-- <span class="form-label d-block">Tell us more about yourself</span> -->
+                                <textarea style="font-size: large;" required
+                                  name="message"
+                                  class="form-control"
+                                  rows="3"
+                                  placeholder="Services"
+                                ></textarea>
+                              </label>
+                    </div> 
+                      
+               </form>
+    </div>
+               <div class="panel-footer">
+                <button class="btn btn-primary" type="submit"  (click)="onSave()">
+                <a routerLink="/company-profile" >Save</a></button>
+              </div>
+          <!-- </div> -->
+
+          <app-company-bottom-navbar></app-company-bottom-navbar>
+    

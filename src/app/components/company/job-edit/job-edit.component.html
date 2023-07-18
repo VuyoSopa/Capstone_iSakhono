@@ -1,0 +1,18 @@
+<!-- <div class="container" *ngIf="job"> -->
+    <div class="content" *ngIf="job" >
+        <img onclick="window.history.go(-1)"  src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (4).svg" alt="" class="left" srcset="" height="49px" width="49px"> 
+          <h4>JOB: {{job.jobtitle}}</h4>
+        
+    </div>
+
+    
+    <div id="text">
+  
+    <div class="edit">
+        <input class="title" type="text" placeholder="Job title" [(ngModel)]="job.jobtitle">
+        <input class="location" type="text" placeholder="Location" [(ngModel)]="job.location">
+        <input class="description" type="text" placeholder="Job description" [(ngModel)]="job.job_description">
+        <input class="work_type" type="text" placeholder="Work type" [(ngModel)]="job.work_type">
+        <button class="button" type="submit" (click)="updatePost()">Submit</button>
+    </div>
+</div>

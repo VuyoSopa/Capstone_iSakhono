@@ -1,0 +1,113 @@
+<!-- <div class="container-2">
+
+<h2> 
+   <img onclick="window.history.go(-1)" src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt="" class="left" srcset="" height="40px" width="40px">
+  Edit Profile
+</h2>
+
+</div> -->
+
+<div id="text">
+  <img onclick="window.history.go(-1)" src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt=""
+    class="left" srcset="" height="50px" width="50px">
+
+  <h2>Edit Profile</h2>
+</div>
+
+<div class="container">
+
+          <form name="form" (ngSubmit)="onSave()" #f="ngForm">
+              
+          <!-- > -->
+
+          <!-- {{ userForm.value | json}} -->
+                <div class="form-group">
+                  <!-- <label for="firstName">firstName/label> -->
+        
+                  <input id="firstName" type="text"  placeholder="First Name" class="form-control"
+                         name="firstName" 
+                         [(ngModel)]="form.firstName"
+                         > 
+                </div>
+
+                <div class="form-group">
+                  <!-- <label for="lastName">Last Name</label> -->
+
+                  <input id="lastName" type="text" placeholder="Last Name" class="form-control"
+                        name="lastName" [(ngModel)]="form.lastName">
+                </div>
+
+                <div class="form-group">
+                  <!-- <label for="dateOfBirth">Date of Birth</label> -->
+
+                  <input id="dateOfBirth" type="text" placeholder="Date of Birth" class="form-control"
+                        name="dateOfBirth" ngModel>
+                </div>
+
+                <div class="form-group">
+                  <!-- <label>Gender</label> -->
+
+                  <div class="form-control">
+                    <label class="radio-inline">
+                      <input   type="radio" name="gender" value="male" ngModel>
+                      Male
+                    </label>
+                    <label class="radio-inline">
+                      <input  type="radio" name="gender" value="female"  ngModel>
+                      Female 
+                     </label>
+                  </div>
+                </div> 
+
+                 <div class="form-group">
+                    <!-- <label for="phoneNumber">Phone number</label> -->
+
+                    <input id="phoneNumber" type="text"  placeholder="Phone number"  class="form-control"
+                          name="phoneNumber" ngModel>
+                  </div>
+
+                  <div class="form-group">
+                    <!-- <label for="emailAddress">Email Address</label> -->
+
+                     <input id="emailAddress" type="text"  placeholder="Email Address" class="form-control"
+                          name="emailAddress" [(ngModel)]="form.email">
+                  </div> 
+
+                  <div class="form-group">
+                    <!-- <label for="homeAddress">Home Address</label> -->
+                    <input id="homeAddress" type="text"  placeholder="Home Address" class="form-control"
+                          name="homeAddress" ngModel>
+                  </div>
+
+                  <div class="form-group">
+                    <!-- <label for="homeAddress">Home Address</label> -->
+                    <input id="workExperience" type="text"  placeholder="Work Experience" class="form-control"
+                          name="workExperience" ngModel>
+                  </div>
+                  <div class="form-group">
+                    <!-- <label for="homeAddress">Home Address</label> -->
+                    <input id="skills" type="text"  placeholder="Skills" class="form-control"
+                          name="skills" ngModel>
+                  </div>
+
+
+                  <h3> Upload Your Work <img src="../../../../assets/images/photo-8-svgrepo-com.svg" alt="" srcset="" height="50px" width="50px"> <img src="../../../../assets/images/video-svgrepo-com.svg" alt="" srcset="" height="50px" width="50px">   
+
+                </h3>
+
+
+
+  
+              <!-- </div> -->
+              
+            
+           </form>
+</div>
+           <div class="panel-footer">
+            <button class="btn btn-primary" type="submit"  (click)="onSave()">Save</button>
+          </div>
+      <!-- </div> -->
+      
+      <app-bottom-navbar></app-bottom-navbar>
+
+      

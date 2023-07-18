@@ -1,0 +1,41 @@
+
+<div id="text">
+  <img onclick="window.history.go(-1)" src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt=""
+    class="left" srcset="" height="50px" width="50px">
+
+  <h2>Candidate</h2>
+</div>
+
+<div class="container">
+  <div class="search d-flex justify-content-center">
+    <input type="text" placeholder="Search for Candidate" name="search" height="15px" width="15px">
+    <button class="click" type="button"><img src="../../../../assets/images/icons8-search.svg" alt="Search image cap" height="20px"
+        width="20px"></button>
+    <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
+  </div>
+
+    
+<div class="row">
+  <div class="card text-center" *ngFor="let user of users">
+    <div class="card-body">
+      <h5 class="card-title">CANDIDATE: {{user.username}}</h5>
+      <p class="card-text">
+        {{user.email}}
+      </p>
+      <a class="btn btn-dark">Connect</a>
+    </div>
+  
+</div>
+
+<!-- <div class="card text-center" *ngFor="let user of users">
+  <div class="card-body">
+    <h5 class="card-title">CANDIDATE: {{user.username}}</h5>
+    <p class="card-text">{{user.email}}</p>
+    <a class="btn btn-dark">Connect</a>
+  </div>
+</div> -->
+</div>
+  
+  
+
+<app-company-bottom-navbar></app-company-bottom-navbar>

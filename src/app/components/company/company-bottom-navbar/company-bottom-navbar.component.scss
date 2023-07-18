@@ -1,0 +1,78 @@
+.nav{
+    background-color: #010144;
+    width: 520px;
+    height: 60px;
+    // margin-top: 3%;
+    
+}
+
+.nav-item-1 {
+    margin-top: -9px;
+    right: 50%;
+
+}
+
+.nav-item-2{
+    position: relative;
+    right:4%;
+    margin-top: -9px;
+    width: 4px;
+    height: 4px;
+}
+
+.nav-item-3{
+    position: relative;
+    left: 15%;
+    top: -3px;
+    width: 4px;
+    height: 4px;
+}
+
+.nav-item-4{
+    position: relative;
+    left: 4%;
+    top: -3px;
+    width: 4px;
+    height: 4px;
+}
+
+.nav{
+    width: 100%;
+}
+
+// .nav-item-4 {
+//     position: relative;
+//     right: 2%;
+//     margin-bottom: 20%;
+//     margin-top: -2%;
+// }
+
+#home{
+    margin-top: 30px;
+    position: relative;
+    right: 60px;
+    color: white;
+} 
+
+#profile{
+    margin-top: 30px;
+    position: relative;
+    right: 3%;
+    color: white; 
+}
+
+#logout {
+    bottom: 8px;
+    position: relative;
+     right: 10px;
+    color: white; 
+    
+}
+
+#posting{
+    margin-top: 30px;
+    position: relative;
+     left: 4%;
+    color: white; 
+    margin-bottom: 500px;
+}

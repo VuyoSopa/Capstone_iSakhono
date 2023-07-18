@@ -1,0 +1,63 @@
+<div class="auth-avatar">
+  <img onclick="window.history.go(-1)"  src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (4).svg" alt="" class="left" srcset="" height="30px" width="30px"> 
+  <img src="../../../../assets/images/sakhono.png" height="180px" alt="sakhono-logo" class="sakhono-logo">
+  </div>
+  
+  <div class="card-body auth-card d-flex justify-content-center">
+    <span style="margin-right: 30px;" class="navReg"><a routerLink="/company-register">Register</a> </span>
+    <span class="navLog"><a routerLink="/company-login">Login</a></span>
+  </div>
+  
+  <!-- <div>
+  <h3>Welcome Back</h3>
+  </div> -->
+  
+  <div class="text-center register" id="noAccount">
+    Don`t have an account ? <a routerLink="/company-register" id=registerName>Register</a> here.
+  </div>
+  
+  <div class="row">
+      <div class="col offset-col-offset d-flex justify-content-center">
+        <div class="card-auth">
+
+              <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+                <div class="form-group" id="companyname">
+                  <!-- <label for="email">Email : </label> -->
+                  <input 
+                    type="text" name="companyname" 
+                    class="form-control" placeholder="Company Name"id="companynameInput"
+                    name="companyname"
+                    [(ngModel)]="form.companyname"
+                    required
+                    #companyname="ngModel" required
+                    [ngClass]="{ 'is-invalid': f.submitted && companyname.errors }"
+                    >
+                </div>
+
+                <div class="form-group" id="password">
+                  <!-- <label for="password">Password : </label> -->
+                  <input 
+                    type="password" 
+                    name="password" class="form-control" 
+                    placeholder="Password"  id="passwordInput"
+                    [(ngModel)]="form.password"
+                    required
+                    minlength="8"
+                    #password="ngModel" required
+                    [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
+                    >
+                <div class="text-right forget-pass">
+                  <a routerLink="/forget-password" id="forgotPassword">Forgot Password ?</a>
+                </div>
+              </div>
+              <div class="text-center" id="buttonForsignin">
+                <!-- <span class="alert alert-danger">{{errorMessage}}</span> -->
+                <input type="submit" class="btn btn-my" value="Login" id="signinButton">
+              </div>
+            </form>
+            
+            
+            
+          </div>
+        </div>
+      </div>
