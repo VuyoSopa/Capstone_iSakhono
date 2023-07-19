@@ -52,6 +52,9 @@
             <div class="text-center" id="buttonForsignin">
               <input type="submit" class="btn btn-my" value="Login"  id="signinButton">
             </div>
+            <div class="alert alert-warning" *ngIf="f.submitted && isLoginFailed">
+             Failed to Login<br />{{ errorMessage }}
+            </div>
           </form>
           
           
