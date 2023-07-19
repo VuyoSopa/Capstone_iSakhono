@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { JobService } from 'src/app/service/job.service';
 import { PostjobAuthService } from 'src/app/service/postjob.auth.service';
 import { PostjobStorageService } from 'src/app/service/postjob.storage.service';
@@ -23,11 +24,13 @@ export class PostJobComponent implements OnInit {
   constructor(
     
     private jobService: JobService,
-    
+    private router: Router
     ) {}
 
   ngOnInit() {
-    
+    if(!window.sessionStorage.getItem('token')){
+      this.router.navigate(['/sign-in'])
+    }
   }
 
   post() {

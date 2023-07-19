@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CompanyAuthService } from 'src/app/service/company.auth.service';
 import { CompanyService } from 'src/app/service/company.service';
 import { CompanyStorageService } from 'src/app/service/company.storage.service';
@@ -20,9 +21,14 @@ export class CompanyProfileComponent implements OnInit {
   constructor(
     private storage: CompanyStorageService,
     private companyService: CompanyAuthService,
-    private jobService: JobService
+    private jobService: JobService,
+    private router: Router
     ) {}
   ngOnInit(): void {
+    if(!window.sessionStorage.getItem('token')){
+      this.router.navigate(['/sign-in'])
+    
+    }
     this.currentEmployer = this.storage.getEmployer()
     console.log(this.currentEmployer);
     this.getProfile();
@@ -30,12 +36,11 @@ export class CompanyProfileComponent implements OnInit {
     
   }
   searchCandidates(){
-    
-
     window.location.replace("search-candidate")
   }
 
   getProfile(){
+    
     this.companyService.getCompany(this.currentEmployer.id).subscribe({
       next: data => {
         this.profile = data

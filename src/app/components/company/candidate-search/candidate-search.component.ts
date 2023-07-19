@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class CandidateSearchComponent implements OnInit {
   users: any
   constructor(
     
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
     ) {}
 
   ngOnInit(): void {
@@ -21,6 +23,13 @@ export class CandidateSearchComponent implements OnInit {
  
 
   getAll() {
+    if(!window.sessionStorage.getItem('token')){
+      this.router.navigate(['/sign-in'])
+      // setTimeout(() => {
+      //   window.location.replace("home") // last line
+      // }, 2000);
+    
+    }
     this.userService.getAllUsers().subscribe({
       next: data => {
         this.users = data
