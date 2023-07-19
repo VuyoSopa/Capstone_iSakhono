@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import { PostjobStorageService } from 'src/app/service/postjob.storage.service';
 import { JobService } from 'src/app/service/job.service';
 
@@ -15,16 +16,22 @@ export class JobSearchComponent implements OnInit {
   jobs: any
   constructor(
     // private PostjobStorageService: PostjobStorageService,
-    private jobService: JobService
+    private jobService: JobService, private router: Router
     ) {}
 
   ngOnInit(): void {
     // this.currentJob = this.PostjobStorageService.getJob()
+    if(!window.sessionStorage.getItem('token')){
+      this.router.navigate(['/sign-in'])
+      
+    
+    }
     this.getAll()
   }
  
 
   getAll() {
+
     this.jobService.getAllJobs().subscribe({
       next: data => {
         this.jobs = data

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { JobService } from 'src/app/service/job.service';
 
 @Component({
@@ -13,15 +13,19 @@ export class JobEditComponent implements OnInit {
 
   constructor(
     private jobService: JobService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
+    if(!window.sessionStorage.getItem('token')){
+      this.router.navigate(['/sign-in'])
+    }
     this.getJob()
   }
 
   getJob(){
-    
+        
     this.jobService.getOnejob(this.id).subscribe({
       next: data => {
         this.job = data

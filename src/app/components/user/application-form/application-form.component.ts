@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 import { StorageService } from 'src/app/service/storage.service';
 
@@ -26,10 +27,15 @@ export class ApplicationFormComponent implements OnInit {
 
   constructor(
 
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
+    if(!window.sessionStorage.getItem('token')){
+      this.router.navigate(['/sign-in'])
+    
+    }
     
   }
   submitApplication(){
