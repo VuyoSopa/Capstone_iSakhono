@@ -1,34 +1,53 @@
-<div id="text"> 
-    
-    <img onclick="window.history.go(-1)"  src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt="" class="left" srcset="" height="40px" width="40px"> 
-    <h2>  
+<div id="text">
+
+  <img onclick="window.history.go(-1)" src="../../../../assets/images/left-arrow-backup-2-svgrepo-com (3).svg" alt=""
+    class="left" srcset="" height="40px" width="40px">
+  <h2>
     Profile
-     </h2>
+  </h2>
 </div>
 
 <div class="profile">
   <img src="../../../../assets/images/user.jpg" alt="Ayabonga" srcset="" id="ayabonga" height="200px" width="195px"
-  border-radius="round">
+    border-radius="round">
 </div>
 
-<div class="content ">
-  <h3> {{currentUser.username}}</h3>
-  <!-- <h4> {{currentUser.skills}}</h4> -->
-  <p>{{currentUser.email}}</p>
-  <!-- <p>{{currentUser.id}}</p> -->
+<div class="content " *ngIf="user">
+  <h3> {{user.username}}</h3>
+  <!-- <h4> {{user.skills}}</h4> -->
+  <p>{{user.email}}</p>
+  <!-- <p>{{user.id}}</p> -->
 </div>
 
-<div class="container-3">
-  <h5> 
-    <img src= "../../../../assets/images/suitcase1-svgrepo-com.svg" alt="" class="case " srcset="" height="30px" width="35px"> 
-    Work Experience 
-    <a routerLink="/profile-edit/"><img src="../../../../assets/images/pen-1319-svgrepo-com (1).svg" alt="" class="pen"></a></h5>
+<div class="container-3 container" *ngIf="user">
+  <h5>
+    <span *ngIf="user.work_experience">
+      <img src="../../../../assets/images/suitcase1-svgrepo-com.svg" alt="" class="case " srcset="" height="30px"
+      width="35px">
+    Work Experience
+    </span>
+    
+    <!-- <span *ngIf="!user.work_expereince">Please edit your profile</span> -->
+    <a routerLink="/profile-edit/{{currentUser.id}}"><img src="../../../../assets/images/pen-1319-svgrepo-com (1).svg"
+        alt="" class="pen"></a>
+  </h5>
+  <span class="experience container">
+    {{user.work_experience}}
+  </span>
+  
 </div>
 
-<div class="container-4">
-  <h6>
-    <img src="../../../../assets/images/tools-svgrepo-com.svg" alt="" class="tool"> Skills<a routerLink="/profile-edit"><img src="../../../../assets/images/pen-1319-svgrepo-com (1).svg" alt="" class="pencil" ></a>
-  </h6>
+<div class="container-top" *ngIf="user">
+  <div class="container-3 container" *ngIf="user.skills">
+    <h6>
+      <img src="../../../../assets/images/tools-svgrepo-com.svg" alt="" class="tool"> Skills
+  
+      <!-- <a routerLink="/profile-edit"><img src="../../../../assets/images/pen-1319-svgrepo-com (1).svg" alt="" class="pencil" ></a> -->
+    </h6>
+    <span class="experience">
+      {{user.skills}}
+    </span>
+  </div>
 </div>
 
 <!-- <div class="panel-footer">

@@ -7,6 +7,12 @@ import { environment } from 'src/environments/environment';
 const base_url = 'https://i-sakhono-backend.vercel.app/api/'
 const user_api = "https://i-sakhono-backend.vercel.app/api/users/"
 // const base_url = "http://localhost:8080/api"
+const token = window.sessionStorage.getItem("token")
+const httpOptions = {
+  headers: new HttpHeaders ({
+    "x-access-token": `${token}`
+  })
+}
 
 @Injectable({
   providedIn: 'root'
@@ -51,11 +57,11 @@ export class AuthService {
     sessionStorage.clear()
   }
   getOneUser(id: any){
-    return this.http.get(user_api+id)
+    return this.http.get(user_api+id, httpOptions)
 
   }
 
   updateUser(data: any, id: any){
-    return this.http.put(user_api+id, data)
+    return this.http.put(user_api+id, data, httpOptions)
   }
 }

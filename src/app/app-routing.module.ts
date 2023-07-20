@@ -39,7 +39,7 @@ const routes: Routes = [
     path: "search-job", component: JobSearchComponent
   },
   {
-    path: "profile-edit", component: ProfileEditComponent
+    path: "profile-edit/:id", component: ProfileEditComponent
   },
   {
     path: "company-register", component: CompanyRegisterComponent
