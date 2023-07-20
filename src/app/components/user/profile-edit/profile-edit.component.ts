@@ -53,7 +53,7 @@ export class ProfileEditComponent {
       }
     })
 
-    window.location.replace("user-profile")
+    // window.location.replace("user-profile")
     
   }
 

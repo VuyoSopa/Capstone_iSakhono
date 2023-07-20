@@ -19,12 +19,7 @@ export class ProfileComponent implements OnInit{
 
   ngOnInit(): void {
 
-    // if(!window.sessionStorage.getItem('auth-token')){
-    //   this.router.navigate(['/sign-in'])
-    //   // setTimeout(() => {
-    //   //   window.location.replace("home") // last line
-    //   // }, 2000);
-    // }
+    
     if(!window.sessionStorage.getItem('token')){
       this.router.navigate(['/sign-in'])
     
